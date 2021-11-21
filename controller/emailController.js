@@ -20,7 +20,7 @@ exports.sendEmail = async (req, res) => {
     to: process.env.SEND_TO,
     subject: "New Think Tank Contact",
     html: `<div>
-                <h3>Think Tank Contact</h3>
+                
                 <p><span style="font-weight:bold">Name: </span>${
                   fullName || "-"
                 }</p>
