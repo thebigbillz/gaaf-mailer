@@ -51,3 +51,5 @@ exports.sendEmail = async (req, res) => {
     });
   }
 };
+
+// mailer
