@@ -13,12 +13,12 @@ const mailer = nodemailer.createTransport({
 });
 
 exports.sendEmail = async (req, res) => {
-  const { fullName, email, company, phone, content } = req.body;
+  const { fullName, email, phone, content } = req.body;
 
   const options = {
     from: process.env.SEND_FROM,
     to: process.env.SEND_TO,
-    subject: "New Think Tank Contact",
+    subject: "New GAAF Limited Contact",
     html: `<div>
                 
                 <p><span style="font-weight:bold">Name: </span>${
@@ -26,9 +26,6 @@ exports.sendEmail = async (req, res) => {
                 }</p>
                 <p><span style="font-weight:bold">Email: </span>${
                   email || "-"
-                }</p>
-                <p><span style="font-weight:bold">Company: </span>${
-                  company || "-"
                 }</p>
                 <p><span style="font-weight:bold">Phone Number: </span>${
                   phone || "-"
